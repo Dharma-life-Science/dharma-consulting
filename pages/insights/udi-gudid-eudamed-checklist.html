@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UDI Compliance Checklist: GUDID vs EUDAMED | Dharma Consulting</title>
+  <meta name="description" content="US and EU UDI databases share a concept but diverge on data attributes. A practical field-by-field comparison for regulatory teams." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/global.css" />
+  <style>
+    .article-body { max-width: 760px; margin: 0 auto; }
+    .article-body h2 { font-size: 1.6rem; margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-size: 1.2rem; margin: 2rem 0 0.75rem; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1rem; }
+    .article-callout { background: rgba(0,194,255,0.04); border-left: 3px solid var(--accent-primary); padding: 1.25rem 1.5rem; border-radius: 0 10px 10px 0; margin: 2rem 0; }
+    .article-callout p { margin: 0; color: var(--text-secondary); }
+    .compare-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 0.9rem; }
+    .compare-table th { background: rgba(0,194,255,0.08); color: var(--text-primary); padding: 12px 16px; text-align: left; border-bottom: 2px solid rgba(0,194,255,0.2); font-family: 'Syne', sans-serif; font-size: 0.85rem; }
+    .compare-table td { padding: 12px 16px; color: var(--text-secondary); border-bottom: 1px solid rgba(0,194,255,0.06); vertical-align: top; line-height: 1.5; }
+    .compare-table tr:hover td { background: rgba(0,194,255,0.02); }
+    .tag-match { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.72rem; font-family: 'JetBrains Mono', monospace; }
+    .tag-match.yes { background: rgba(0,214,143,0.1); color: var(--success); }
+    .tag-match.no  { background: rgba(255,77,106,0.1); color: var(--error); }
+    .tag-match.partial { background: rgba(255,184,0,0.1); color: var(--warning); }
+  </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero" style="min-height:auto; padding:140px 1.5rem 4rem;" aria-label="Article hero">
+  <div class="page-hero-orb" aria-hidden="true"></div>
+  <div style="position:relative; z-index:2; max-width:780px; margin:0 auto;">
+    <span class="blog-category" style="display:block; margin-bottom:1rem;">Regulatory Data</span>
+    <h1 style="animation: fadeUpIn 0.65s both 0.3s; font-size:clamp(1.8rem,3.5vw,3rem);">UDI Compliance Checklist: GUDID vs EUDAMED Data Requirements</h1>
+    <div style="display:flex; gap:1.5rem; align-items:center; margin-top:1.5rem; flex-wrap:wrap; animation: fadeUpIn 0.65s both 0.5s;">
+      <span class="blog-read-time">5 min read</span>
+      <span style="color:var(--text-muted); font-size:0.85rem;">Published by Dharma Consulting</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-primary); padding-top:1rem;" aria-label="Article content">
+  <div class="article-body">
+
+    <p style="font-size:1.125rem; color:var(--text-primary);">Medical device manufacturers operating in both US and EU markets must maintain accurate UDI data in two separate regulatory databases: GUDID (Global Unique Device Identification Database) in the US and EUDAMED in the EU. The UDI concept is shared — but the required data attributes, formats, and submission rules diverge significantly.</p>
+
+    <h2>The Core Distinction</h2>
+    <p>Both GUDID and EUDAMED require UDI-DI (Device Identifier) and UDI-PI (Production Identifier) data. Both associate this data with specific device attributes. But the attribute definitions, field requirements, and regulatory interpretations are different enough that you cannot use GUDID data as a direct template for EUDAMED submissions.</p>
+
+    <div class="article-callout">
+      <p><strong style="color:var(--accent-primary);">Key risk:</strong> Teams that copy GUDID submissions directly into EUDAMED without attribute reconciliation consistently create compliance gaps — particularly for single-use designation, MRI safety, and sterility data fields.</p>
+    </div>
+
+    <h2>Field-by-Field Comparison</h2>
+    <table class="compare-table" role="table" aria-label="GUDID vs EUDAMED data attribute comparison">
+      <thead>
+        <tr>
+          <th>Data Field</th>
+          <th>GUDID (US FDA)</th>
+          <th>EUDAMED (EU MDR)</th>
+          <th>Match?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Device Identifier (UDI-DI)</td>
+          <td>Required — GS1, HIBCC, or ICCBBA format</td>
+          <td>Required — same issuing agencies recognized</td>
+          <td><span class="tag-match yes">YES</span></td>
+        </tr>
+        <tr>
+          <td>Brand Name</td>
+          <td>Required</td>
+          <td>Required</td>
+          <td><span class="tag-match yes">YES</span></td>
+        </tr>
+        <tr>
+          <td>Device Description</td>
+          <td>Required — free text</td>
+          <td>Required — aligned with intended purpose in CER</td>
+          <td><span class="tag-match partial">PARTIAL</span></td>
+        </tr>
+        <tr>
+          <td>Single Use Designation</td>
+          <td>Yes/No field</td>
+          <td>Yes/No + must align with labeling and IFU labeling requirements</td>
+          <td><span class="tag-match partial">PARTIAL</span></td>
+        </tr>
+        <tr>
+          <td>MRI Safety</td>
+          <td>Conditional — required if implantable</td>
+          <td>Required for implantable devices — ASTM F2503 categories</td>
+          <td><span class="tag-match partial">PARTIAL</span></td>
+        </tr>
+        <tr>
+          <td>Sterility</td>
+          <td>Sterility method field</td>
+          <td>Sterile + sterilization method — broader requirement</td>
+          <td><span class="tag-match partial">PARTIAL</span></td>
+        </tr>
+        <tr>
+          <td>GMDN Code</td>
+          <td>Not required</td>
+          <td>Required — GMDN code or EMDN code</td>
+          <td><span class="tag-match no">NO</span></td>
+        </tr>
+        <tr>
+          <td>Clinical Size</td>
+          <td>Optional structured fields</td>
+          <td>Required for specific device categories</td>
+          <td><span class="tag-match partial">PARTIAL</span></td>
+        </tr>
+        <tr>
+          <td>Reference / Catalog Number</td>
+          <td>Required</td>
+          <td>Required as Reference Number</td>
+          <td><span class="tag-match yes">YES</span></td>
+        </tr>
+        <tr>
+          <td>Packaging Levels</td>
+          <td>Required — base package and above</td>
+          <td>Required — each packaging level needs a separate UDI-DI</td>
+          <td><span class="tag-match partial">PARTIAL</span></td>
+        </tr>
+        <tr>
+          <td>Risk Class</td>
+          <td>Not required</td>
+          <td>Required — EU MDR risk classification</td>
+          <td><span class="tag-match no">NO</span></td>
+        </tr>
+        <tr>
+          <td>Notified Body Number</td>
+          <td>Not applicable</td>
+          <td>Required for Class II and above</td>
+          <td><span class="tag-match no">NO</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>The GMDN Code Gap</h2>
+    <p>One of the most frequently missed EUDAMED requirements is the GMDN (Global Medical Device Nomenclature) or EMDN code. GUDID does not require this field. Companies that build their regulatory data workflow around GUDID requirements will not have GMDN codes assigned for their products — and will face delays at EUDAMED registration when the field is required.</p>
+
+    <h2>Packaging Level UDI-DI Requirements</h2>
+    <p>Both systems require data for each packaging configuration, but the EU applies a stricter interpretation: each distinct package configuration with a different UDI-DI must be registered separately in EUDAMED. US GUDID allows more flexibility in how packaging hierarchies are documented. This means EUDAMED submissions typically require more individual records than GUDID for the same product range.</p>
+
+    <h2>Managing Dual-Database Accuracy</h2>
+    <p>For manufacturers maintaining both databases, the primary risk is divergence — GUDID updated after a labeling change, EUDAMED not updated (or vice versa). This requires a formal regulatory data management process that:</p>
+    <ul>
+      <li>Connects labeling change control to both database update requirements</li>
+      <li>Assigns clear ownership for each database</li>
+      <li>Includes a periodic reconciliation review (at minimum annually)</li>
+      <li>Maintains an audit trail of changes in both systems</li>
+    </ul>
+
+    <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border-default);">
+      <a href="../contact.html" class="btn-primary">Get UDI Compliance Support →</a>
+      <a href="../insights.html" class="btn-ghost">← All Insights</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner" aria-label="CTA">
+  <div style="max-width:800px; margin:0 auto;" data-reveal="scale">
+    <h2>Managing GUDID and EUDAMED for Multiple Products?</h2>
+    <p>Dharma Consulting manages regulatory database accuracy and UDI compliance for medical device companies globally.</p>
+    <a href="../contact.html" class="btn-primary white">Book Free Consultation →</a>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="../../js/layout.js"></script>
+<script src="../../js/global.js"></script>
+</body>
+</html>

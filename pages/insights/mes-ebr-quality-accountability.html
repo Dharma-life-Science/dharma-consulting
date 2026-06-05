@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How MES Implementation Changes Quality Accountability | Dharma Consulting</title>
+  <meta name="description" content="Moving from paper batch records to eBR redefines who owns what in your quality system. A practical MES implementation guide from Dharma Consulting." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/global.css" />
+  <style>
+    .article-body { max-width: 760px; margin: 0 auto; }
+    .article-body h2 { font-size: 1.6rem; margin: 2.5rem 0 1rem; }
+    .article-body h3 { font-size: 1.2rem; margin: 2rem 0 0.75rem; }
+    .article-body p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.25rem; font-size: 1rem; }
+    .article-body ul { margin: 1rem 0 1.5rem 1.5rem; list-style: disc; }
+    .article-body ul li { color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-callout { background: rgba(0,194,255,0.04); border-left: 3px solid var(--accent-primary); padding: 1.25rem 1.5rem; border-radius: 0 10px 10px 0; margin: 2rem 0; }
+    .article-callout p { margin: 0; color: var(--text-secondary); }
+  </style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<section class="page-hero" style="min-height:auto; padding:140px 1.5rem 4rem;" aria-label="Article hero">
+  <div class="page-hero-orb" aria-hidden="true"></div>
+  <div style="position:relative; z-index:2; max-width:780px; margin:0 auto;">
+    <span class="blog-category" style="display:block; margin-bottom:1rem;">MES Implementation</span>
+    <h1 style="animation: fadeUpIn 0.65s both 0.3s; font-size:clamp(1.8rem,3.5vw,3rem);">How MES Implementation Changes Quality Accountability at Scale</h1>
+    <div style="display:flex; gap:1.5rem; align-items:center; margin-top:1.5rem; flex-wrap:wrap; animation: fadeUpIn 0.65s both 0.5s;">
+      <span class="blog-read-time">8 min read</span>
+      <span style="color:var(--text-muted); font-size:0.85rem;">Published by Dharma Consulting</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-primary); padding-top:1rem;" aria-label="Article content">
+  <div class="article-body">
+
+    <p style="font-size:1.125rem; color:var(--text-primary);">MES implementation is not a software project. Organizations that treat it as one consistently underestimate the quality accountability shifts it requires. When you move from paper batch records to electronic batch records (eBR), you're not just digitizing data — you're restructuring who is responsible for what, when, and how it's documented.</p>
+
+    <h2>The Paper BR Assumption That Breaks Everything</h2>
+    <p>Paper batch records assume a specific mental model: operators fill in data fields, supervisors sign off, and quality reviews the completed record after production. The record is a retrospective artifact. Nobody expects it to enforce compliance in real time.</p>
+    <p>MES and eBR systems change this fundamentally. Electronic batch records are designed to be active — they enforce sequencing, restrict out-of-specification entries, prompt for electronic signatures at controlled steps, and generate exception records automatically. They're not retrospective. They're concurrent.</p>
+
+    <div class="article-callout">
+      <p><strong style="color:var(--accent-primary);">The critical shift:</strong> Paper BRs document what happened. eBR systems govern what can happen. That difference requires a complete rethinking of quality ownership roles.</p>
+    </div>
+
+    <h2>What Happens to Quality Accountability During the Transition</h2>
+    <p>In a paper world, quality personnel review completed batch records and identify errors after the fact. This creates a QA function that is primarily reactive — catching issues post-production.</p>
+    <p>In an MES environment, quality accountability shifts upstream in three ways:</p>
+    <ul>
+      <li><strong>eBR requirements must be defined before system build.</strong> Quality teams must specify exactly what data fields, electronic signatures, and tolerance limits should be built into the system. This requires upfront process expertise, not retrospective review.</li>
+      <li><strong>Exception handling becomes systematic.</strong> Every out-of-specification event is automatically flagged and routed. Quality must define these routing rules in advance — who receives what exception, under what conditions, and what actions are required.</li>
+      <li><strong>Change control becomes more complex.</strong> Changing a process step in an MES environment isn't just updating a paper SOP — it requires a formal system change with impact assessments, validation, and multi-site coordination if the process runs across sites.</li>
+    </ul>
+
+    <h2>The Multi-Site Standardization Problem</h2>
+    <p>Multi-site MES implementations surface a problem that paper-based systems could hide: sites have developed local practices that diverge from the documented global process. In a paper environment, this variation is invisible in the batch record. In an MES environment, it becomes immediately apparent when you try to build a single global eBR template.</p>
+    <p>What looks like a technology deployment problem is actually a process standardization problem. You cannot build a standardized eBR template until you understand how each site currently operates, identify where practices diverge from the global standard, and drive those divergences to resolution through change control before the system build begins.</p>
+
+    <div class="article-callout">
+      <p><strong style="color:var(--accent-primary);">Lesson from the field:</strong> Every day of process standardization work done before MES system build saves multiple days of costly configuration changes, revalidation, and retraining after go-live.</p>
+    </div>
+
+    <h2>Building a Process Standardization Workstream</h2>
+    <p>Effective MES implementation requires a dedicated process standardization workstream running parallel to the technology deployment. This workstream should:</p>
+    <ul>
+      <li>Map current-state processes at each manufacturing site using structured flowcharts</li>
+      <li>Identify and document site-specific variations from the global process standard</li>
+      <li>Engage subject matter experts from each site to understand the operational rationale behind variations</li>
+      <li>Develop a single global standard that all sites can follow — balancing standardization with legitimate site-specific requirements</li>
+      <li>Route each standardization decision through formal change control, documented and approved before system build</li>
+    </ul>
+
+    <h2>The Role of Quality in eBR Requirements Definition</h2>
+    <p>The most consequential quality input in an MES implementation happens before a single line of configuration is written. eBR requirements documents — which define what the system must enforce, prompt, and record — must be authored with deep quality systems knowledge.</p>
+    <p>Poorly defined eBR requirements lead to systems that either over-constrain operators (creating work-around culture) or under-constrain critical process steps (creating audit findings). Getting requirements right the first time requires quality professionals who understand both the regulatory expectation and the operational reality.</p>
+
+    <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border-default);">
+      <a href="../contact.html" class="btn-primary">Talk to Our MES Experts →</a>
+      <a href="../insights.html" class="btn-ghost">← All Insights</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner" aria-label="CTA">
+  <div style="max-width:800px; margin:0 auto;" data-reveal="scale">
+    <h2>Planning an MES Implementation?</h2>
+    <p>Dharma Consulting provides process standardization and eBR requirements consulting for multi-site MES deployments.</p>
+    <a href="../contact.html" class="btn-primary white">Book Free Consultation →</a>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="../../js/layout.js"></script>
+<script src="../../js/global.js"></script>
+</body>
+</html>

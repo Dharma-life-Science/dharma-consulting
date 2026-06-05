@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dharma Consulting | Regulatory Affairs &amp; Quality Consulting for Medical Devices</title>
+  <meta name="description" content="Remote regulatory affairs and quality consulting for US medical device and pharma companies. EU MDR, ISO 13485, RIMS, EUDAMED, MES/eBR. India-based, EST hours." />
+  <meta property="og:title" content="Dharma Consulting | Regulatory Affairs &amp; Quality Consulting" />
+  <meta property="og:description" content="Precision regulatory and quality consulting for medical device and pharmaceutical companies." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<div id="nav-placeholder"></div>
+
+<!-- ═══════════════════════════════════════════
+     HERO SECTION
+═══════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-orb-1"></div>
+  <div class="hero-orb-2"></div>
+  <canvas id="particles-canvas"></canvas>
+  <div class="noise-overlay"></div>
+
+  <div class="hero-content">
+    <!-- Eyebrow -->
+    <div class="eyebrow-pill" style="animation: fadeUpIn 0.6s cubic-bezier(0.22,1,0.36,1) 0.2s both;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Trusted by US-Based Medical Device &amp; Pharma Companies
+    </div>
+
+    <!-- H1 -->
+    <h1 class="hero-h1" style="margin-bottom: 0.5rem;">
+      <span class="hero-word-reveal" style="display:block;">
+        Regulatory <span class="gradient-text">Precision.</span>
+      </span>
+      <span class="hero-word-reveal" style="display:block; animation-delay:0.55s;">
+        Quality <span class="gradient-text">Confidence.</span>
+      </span>
+      <span class="hero-word-reveal" style="display:block; animation-delay:0.7s;">
+        Global <span class="gradient-text">Compliance.</span>
+      </span>
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="hero-subhead" style="animation: fadeUpIn 0.65s cubic-bezier(0.22,1,0.36,1) 0.9s both;">
+      Dharma Consulting delivers independent, remote regulatory affairs and quality consulting to medical device and pharmaceutical companies — across US, EU, and Swiss markets. We work lean, move fast, and deliver without hand-holding.
+    </p>
+
+    <!-- CTA Row -->
+    <div class="hero-cta-row" style="animation: fadeUpIn 0.65s cubic-bezier(0.22,1,0.36,1) 1.1s both;">
+      <a href="pages/contact.html" class="btn-primary" id="hero-cta-primary">Book a Free Consultation →</a>
+      <a href="pages/services.html" class="btn-ghost" id="hero-cta-ghost">Explore Our Services</a>
+    </div>
+
+    <!-- Trust Indicators -->
+    <div class="trust-strip" style="animation: fadeUpIn 0.65s cubic-bezier(0.22,1,0.36,1) 1.3s both;">
+      <div class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        NDA-Protected Engagements
+      </div>
+      <div class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        US · EU · Switzerland Markets
+      </div>
+      <div class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        ISO 13485 &amp; EU MDR Expertise
+      </div>
+      <div class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Remote-First · EST Hours
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     METRICS STRIP
+═══════════════════════════════════════════ -->
+<div class="metrics-strip" role="region" aria-label="Key metrics">
+  <div class="metrics-grid" data-reveal>
+    <div class="metric-item">
+      <div class="metric-bar"></div>
+      <span class="metric-number" data-counter data-target="15" data-suffix="+">15+</span>
+      <p class="metric-label">Regulatory Services Offered</p>
+    </div>
+    <div class="metric-item">
+      <div class="metric-bar"></div>
+      <span class="metric-number" data-counter data-target="5" data-suffix="+">5+</span>
+      <p class="metric-label">Global Manufacturing Sites Supported</p>
+    </div>
+    <div class="metric-item">
+      <div class="metric-bar"></div>
+      <span class="metric-number" data-counter data-target="100" data-suffix="%">100%</span>
+      <p class="metric-label">Remote Delivery — Zero Office Overhead</p>
+    </div>
+    <div class="metric-item">
+      <div class="metric-bar"></div>
+      <span class="metric-number" data-counter data-target="2" data-suffix="">2</span>
+      <p class="metric-label">Active Client Engagements</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SERVICES OVERVIEW
+═══════════════════════════════════════════ -->
+<section class="section" style="background: var(--bg-primary);" aria-label="Services overview">
+  <div class="section-inner">
+    <div class="section-header" data-reveal>
+      <span class="eyebrow">WHAT WE DO</span>
+      <h2>End-to-End Regulatory &amp; Quality Solutions</h2>
+      <p>From RIMS data management to MES implementation, Dharma Consulting handles the regulatory and quality complexity so your team doesn't have to.</p>
+    </div>
+
+    <div class="grid-3" style="margin-top: 3.5rem;">
+      <!-- Card 1 -->
+      <article class="glass-card service-card" data-reveal>
+        <div class="service-card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Regulatory Affairs Consulting</h3>
+        <p>RIMS management, GUDID and EUDAMED submissions, UDI compliance, eIFU gap analysis, and global regulatory database maintenance across US, EU, and Swiss markets.</p>
+        <a href="pages/services/regulatory-affairs-consulting.html" class="service-card-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="glass-card service-card" data-reveal>
+        <div class="service-card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <h3>Quality Consulting</h3>
+        <p>ISO 13485-aligned QMS consulting, change control management, process standardization, and quality systems implementation for medical device manufacturers.</p>
+        <a href="pages/services/quality-consulting.html" class="service-card-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="glass-card service-card" data-reveal>
+        <div class="service-card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="14" x2="22" y2="14"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="14" x2="4" y2="14"/></svg>
+        </div>
+        <h3>MES / eBR Implementation</h3>
+        <p>Transitioning paper-based batch records to electronic batch records across multi-site global manufacturing — standardized, compliant, and validated.</p>
+        <a href="pages/services/mes-ebr-implementation.html" class="service-card-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="glass-card service-card" data-reveal>
+        <div class="service-card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        </div>
+        <h3>EU MDR Compliance</h3>
+        <p>EUDAMED data submissions, eIFU position paper gap analysis, EU MDR documentation review, and labeling compliance for Class I–III medical devices.</p>
+        <a href="pages/services/eu-mdr-compliance.html" class="service-card-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="glass-card service-card" data-reveal>
+        <div class="service-card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <h3>Regulatory Data Management</h3>
+        <p>Maintaining audit-ready regulatory trackers, product registration data across global databases, and Agile PLM document flows — with zero tolerance for data errors.</p>
+        <a href="pages/services/regulatory-data-management.html" class="service-card-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="glass-card service-card" data-reveal>
+        <div class="service-card-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3>Gap Analysis &amp; Compliance Tracking</h3>
+        <p>Independent gap analysis against MDCG guidelines, eIFU requirements, and EU MDR — with structured action plans, SME coordination, and full closure tracking.</p>
+        <a href="pages/services/regulatory-gap-analysis.html" class="service-card-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+    </div>
+
+    <div class="text-center mt-2xl">
+      <a href="pages/services.html" class="btn-ghost" id="view-all-services">View All 16 Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     HOW WE WORK
+═══════════════════════════════════════════ -->
+<section class="section bg-secondary" aria-label="Our process">
+  <div class="section-inner">
+    <div class="section-header" data-reveal>
+      <span class="eyebrow">OUR PROCESS</span>
+      <h2>Simple. Structured. No Micromanagement.</h2>
+    </div>
+
+    <div class="process-steps" style="margin-top: 3.5rem;">
+      <div class="process-step" data-reveal>
+        <div class="process-step-number">1</div>
+        <div class="process-connector"></div>
+        <div class="process-step-text" style="margin-top:1rem;">
+          <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Discovery Call</h3>
+          <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">We understand your regulatory landscape, compliance gaps, and immediate priorities in a single focused session. No lengthy onboarding — just clarity.</p>
+        </div>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="process-step-number">2</div>
+        <div class="process-connector"></div>
+        <div class="process-step-text" style="margin-top:1rem;">
+          <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Scoped Engagement</h3>
+          <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">You receive a clearly defined scope, deliverable list, and timeline. No vague retainers, no hidden hours, no scope creep.</p>
+        </div>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="process-step-number">3</div>
+        <div class="process-connector"></div>
+        <div class="process-step-text" style="margin-top:1rem;">
+          <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Independent Execution</h3>
+          <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">Our consultant takes ownership. Daily timesheet logs, structured progress trackers, and proactive communication — without needing to follow up on us.</p>
+        </div>
+      </div>
+      <div class="process-step" data-reveal>
+        <div class="process-step-number">4</div>
+        <div class="process-step-text" style="margin-top:1rem;">
+          <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">Delivery &amp; Review</h3>
+          <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">Audit-ready documentation, closed trackers, and final deliverables — reviewed together and signed off. Every time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHY CHOOSE DHARMA
+═══════════════════════════════════════════ -->
+<section class="section" style="background: var(--bg-primary);" aria-label="Why Dharma Consulting">
+  <div class="section-inner">
+    <div class="why-grid">
+      <!-- Left content -->
+      <div data-reveal="left">
+        <span class="eyebrow">WHY DHARMA</span>
+        <h2>What Makes Us Different</h2>
+        <p style="color:var(--text-secondary); margin-top:1rem; font-size:1rem; line-height:1.7;">Most consulting firms build large teams and layer overhead on top. Dharma operates differently — lean, precise, and built for independent delivery.</p>
+
+        <div class="why-differentiators">
+          <div class="why-item">
+            <div class="why-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Independent Execution</h4>
+              <p>We don't need daily meetings or status calls. Give us the objective and the tools — we'll build the action plan, execute, and report. Ownership is in our DNA.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Regulatory + Quality Under One Roof</h4>
+              <p>Most consultants specialize in one area. Dharma bridges regulatory affairs and quality systems — critical when both functions need to move together.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>US-Market Expertise, India-Based Efficiency</h4>
+              <p>Deep expertise in FDA, EU MDR, and Swiss MedDO regulations — delivered remotely at a fraction of US consulting day rates. Full EST business hour overlap.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <div class="why-item-text">
+              <h4>Audit-Ready Deliverables, Every Time</h4>
+              <p>Every tracker, document, and submission is prepared for regulatory scrutiny. We don't just complete tasks — we build compliance assets that hold up under audit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right geometric art -->
+      <div class="geo-art" data-reveal="right" aria-hidden="true">
+        <div class="geo-art-inner">
+          <div class="geo-circle" style="width:300px; height:300px; animation-delay:0s;"></div>
+          <div class="geo-circle" style="width:220px; height:220px; border-color:rgba(0,194,255,0.2); animation-delay:1s; animation-duration:8s;"></div>
+          <div class="geo-circle" style="width:140px; height:140px; border-color:rgba(107,0,255,0.2); animation-delay:2s; animation-duration:5s;"></div>
+          <div class="geo-circle" style="width:60px; height:60px; background:rgba(0,194,255,0.06); border-color:rgba(0,194,255,0.3); animation-delay:0.5s;"></div>
+        </div>
+        <!-- Grid lines are CSS ::before -->
+        <div style="position:absolute; bottom:24px; left:24px; font-family:'JetBrains Mono',monospace; font-size:0.62rem; color:rgba(0,194,255,0.4); letter-spacing:0.1em; text-transform:uppercase;">
+          ISO 13485 · EU MDR · FDA 21 CFR
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     OPEN POSITIONS TEASER
+═══════════════════════════════════════════ -->
+<section class="section bg-secondary" aria-label="Open positions">
+  <div class="section-inner">
+    <div class="section-header" data-reveal>
+      <span class="eyebrow">JOIN US</span>
+      <h2>We Hire Independent Thinkers</h2>
+      <p>Dharma Consulting is a lean remote team. We hire people who identify problems, build their own plans, and deliver — without being told to. If that's you, we want to hear from you.</p>
+    </div>
+
+    <div class="grid-2" style="margin-top: 3rem;">
+      <!-- Job Card 1 -->
+      <article class="glass-card job-card" data-reveal>
+        <div class="job-card-header">
+          <h3>Regulatory Affairs Consultant</h3>
+          <a href="pages/apply/regulatory-affairs-consultant.html" class="btn-primary sm" id="apply-ra-teaser">Apply Now →</a>
+        </div>
+        <div class="job-meta-row">
+          <span class="badge cyan">Remote</span>
+          <span class="badge">Full-Time Contract</span>
+          <span class="badge">2–5 Years Exp</span>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:1rem;">
+          <span class="badge">RIMS</span><span class="badge">EUDAMED</span><span class="badge">EU MDR</span><span class="badge">Agile PLM</span><span class="badge">UDI</span><span class="badge">GUDID</span>
+        </div>
+        <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.65; margin-bottom:1.25rem;">Own regulatory data accuracy, drive EUDAMED submissions, perform eIFU gap analysis, and maintain audit-ready trackers — independently.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="pages/careers.html#regulatory-affairs-consultant" class="btn-ghost sm">View Full JD →</a>
+          <a href="pages/apply/regulatory-affairs-consultant.html" class="btn-primary sm" id="apply-ra-teaser-2">Apply Now →</a>
+        </div>
+      </article>
+
+      <!-- Job Card 2 -->
+      <article class="glass-card job-card" data-reveal>
+        <div class="job-card-header">
+          <h3>Quality Consultant — MES Implementation</h3>
+          <a href="pages/apply/quality-consultant-mes.html" class="btn-primary sm" id="apply-qc-teaser">Apply Now →</a>
+        </div>
+        <div class="job-meta-row">
+          <span class="badge cyan">Remote</span>
+          <span class="badge">Full-Time Contract</span>
+          <span class="badge">2–5 Years Exp</span>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:1rem;">
+          <span class="badge">ISO 13485</span><span class="badge">MES/eBR</span><span class="badge">Change Control</span><span class="badge">JIRA</span>
+        </div>
+        <p style="color:var(--text-secondary); font-size:0.9rem; line-height:1.65; margin-bottom:1.25rem;">Standardize quality processes across 5 global manufacturing sites, own eBR requirements, and drive change control closure — independently.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="pages/careers.html#quality-consultant-mes" class="btn-ghost sm">View Full JD →</a>
+          <a href="pages/apply/quality-consultant-mes.html" class="btn-primary sm" id="apply-qc-teaser-2">Apply Now →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center mt-xl">
+      <a href="pages/careers.html" class="btn-ghost" id="see-all-positions">See All Open Positions →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════ -->
+<section class="section" style="background: var(--bg-primary);" aria-label="Client testimonials">
+  <div class="section-inner">
+    <div class="section-header" data-reveal>
+      <span class="eyebrow">CLIENT FEEDBACK</span>
+      <h2>Trusted by Compliance Teams</h2>
+    </div>
+
+    <div class="grid-3" style="margin-top: 3rem;">
+      <article class="glass-card testimonial-card" data-reveal>
+        <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 stars">
+          <span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span>
+        </div>
+        <p class="testimonial-text">"Dharma's consultant took ownership of our EUDAMED gap analysis from day one. Zero hand-holding needed — we just reviewed the final tracker and everything was closed."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">SM</div>
+          <div>
+            <div class="testimonial-name">Sarah M.</div>
+            <div class="testimonial-title">VP Regulatory Affairs, US Medical Device Company</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass-card testimonial-card" data-reveal>
+        <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 stars">
+          <span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span>
+        </div>
+        <p class="testimonial-text">"Regulatory data accuracy improved significantly after Dharma standardized our GUDID submissions process. Highly recommend for lean compliance teams."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">JK</div>
+          <div>
+            <div class="testimonial-name">James K.</div>
+            <div class="testimonial-title">Quality Director, Pharmaceutical Manufacturer</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass-card testimonial-card" data-reveal>
+        <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 stars">
+          <span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span><span class="testimonial-star">★</span>
+        </div>
+        <p class="testimonial-text">"Their MES process standardization work saved us months of misalignment across our five sites. Professional, precise, and completely self-managed."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">PR</div>
+          <div>
+            <div class="testimonial-name">Priya R.</div>
+            <div class="testimonial-title">Global Quality Systems Lead</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     BLOG PREVIEW
+═══════════════════════════════════════════ -->
+<section class="section bg-secondary" aria-label="Insights">
+  <div class="section-inner">
+    <div class="section-header" data-reveal>
+      <span class="eyebrow">INSIGHTS</span>
+      <h2>Regulatory Intelligence for Compliance Teams</h2>
+    </div>
+
+    <div class="grid-3" style="margin-top: 3rem;">
+      <article class="glass-card blog-card" data-reveal>
+        <div class="blog-card-image">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-category">EU MDR</span>
+          <h3>EU MDR 2024: What Medical Device Manufacturers Still Get Wrong</h3>
+          <p>EUDAMED registration, eIFU compliance, and UDI data accuracy remain common failure points. Here is what to fix first.</p>
+          <div class="blog-meta">
+            <a href="pages/insights/eu-mdr-common-mistakes.html" class="service-card-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <span class="blog-read-time">6 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass-card blog-card" data-reveal>
+        <div class="blog-card-image">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/></svg>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-category">MES Implementation</span>
+          <h3>How MES Implementation Changes Quality Accountability at Scale</h3>
+          <p>Moving from paper batch records to eBR is not just a technology change — it redefines who owns what in your quality system.</p>
+          <div class="blog-meta">
+            <a href="pages/insights/mes-ebr-quality-accountability.html" class="service-card-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <span class="blog-read-time">8 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass-card blog-card" data-reveal>
+        <div class="blog-card-image">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-category">Regulatory Data</span>
+          <h3>UDI Compliance Checklist: GUDID vs EUDAMED Data Requirements</h3>
+          <p>US and EU UDI databases share a concept but diverge on data attributes. A practical field-by-field comparison.</p>
+          <div class="blog-meta">
+            <a href="pages/insights/udi-gudid-eudamed-checklist.html" class="service-card-link">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <span class="blog-read-time">5 min read</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center mt-xl">
+      <a href="pages/insights.html" class="btn-ghost" id="browse-insights">Browse All Insights →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FINAL CTA BANNER
+═══════════════════════════════════════════ -->
+<section class="cta-banner" role="complementary" aria-label="Call to action">
+  <div style="max-width:800px; margin:0 auto;" data-reveal="scale">
+    <h2>Ready to Close Your Compliance Gaps?</h2>
+    <p>Book a free 30-minute consultation. No sales pitch — just a direct conversation about your regulatory and quality challenges.</p>
+    <a href="pages/contact.html" class="btn-primary white" id="final-cta-btn">Book Free Consultation →</a>
+    <p class="cta-banner-sub">NDA signed before first call. Full confidentiality guaranteed.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>
+
+<script src="js/layout.js"></script>
+<script src="js/global.js"></script>
+</body>
+</html>
