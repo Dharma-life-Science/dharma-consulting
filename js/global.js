@@ -1,19 +1,30 @@
 /* ============================================================
    DHARMA CONSULTING — GLOBAL JAVASCRIPT
-   Handles: Nav, Mobile Menu, Scroll Reveal, Counters, Particles
+   Handles: Nav, Mobile Menu, Scroll Reveal, Counters, Particles,
+            Page Loader, FAQ Accordion, Hero Reveal, Forms
    ============================================================ */
 
 (function () {
   'use strict';
+
+  /* ── PAGE LOADER (Task 1) ── */
+  function initPageLoader() {
+    const loader = document.getElementById('page-loader');
+    if (!loader) return;
+    setTimeout(() => {
+      loader.classList.add('fade-out');
+      setTimeout(() => { loader.style.display = 'none'; }, 500);
+    }, 400);
+  }
 
   /* ── NAVIGATION ── */
   function initNav() {
     const nav = document.getElementById('main-nav');
     if (!nav) return;
 
-    // Scroll behavior
+    // Scroll behavior — navbar transparent on load, .scrolled after 60px
     function updateNav() {
-      if (window.scrollY > 40) {
+      if (window.scrollY > 60) {
         nav.classList.add('scrolled');
       } else {
         nav.classList.remove('scrolled');
@@ -26,7 +37,7 @@
     const links = nav.querySelectorAll('.nav-link');
     const currentPath = window.location.pathname.replace(/\/$/, '');
     links.forEach(link => {
-      const href = link.getAttribute('href').replace(/\/$/, '');
+      const href = (link.getAttribute('href') || '').replace(/\/$/, '');
       if (href === currentPath || (currentPath === '' && href === '/') || (currentPath.endsWith('index.html') && href === '/')) {
         link.classList.add('active');
       } else if (href !== '/' && href !== '/index.html' && currentPath.startsWith(href)) {
@@ -67,14 +78,28 @@
     });
   }
 
-  /* ── SCROLL REVEAL ── */
+  /* ── SMOOTH SCROLL (Task 1) ── */
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+
+  /* ── SCROLL REVEAL (Task 1) ── */
   function initScrollReveal() {
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
           setTimeout(() => {
+            entry.target.classList.add('visible');
             entry.target.classList.add('is-visible');
-          }, i * 80);
+          }, i * 90);
           revealObserver.unobserve(entry.target);
         }
       });
@@ -83,19 +108,20 @@
     document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
   }
 
-  /* ── ANIMATED COUNTERS ── */
-  function animateCounter(el, target, duration) {
-    duration = duration || 2200;
-    let startTime = null;
+  /* ── ANIMATED COUNTERS (Task 1) ── */
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target);
     const suffix = el.dataset.suffix || '';
+    const duration = 2000;
+    let startTime = null;
 
-    function step(ts) {
+    const step = (ts) => {
       if (!startTime) startTime = ts;
       const progress = Math.min((ts - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       el.textContent = Math.floor(eased * target) + suffix;
       if (progress < 1) requestAnimationFrame(step);
-    }
+    };
     requestAnimationFrame(step);
   }
 
@@ -103,9 +129,8 @@
     const counterObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const el = entry.target;
-          animateCounter(el, parseInt(el.dataset.target), 2200);
-          counterObserver.unobserve(el);
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.5 });
@@ -178,7 +203,7 @@
     requestAnimationFrame(draw);
   }
 
-  /* ── FAQ ACCORDION ── */
+  /* ── FAQ ACCORDION (Task 1 — Smooth Animation) ── */
   function initFAQ() {
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -200,7 +225,7 @@
     });
   }
 
-  /* ── HERO H1 CHAR REVEAL ── */
+  /* ── HERO H1 CHAR REVEAL (Task 1) ── */
   function initHeroReveal() {
     const heroWords = document.querySelectorAll('.hero-word-reveal');
     heroWords.forEach((word, i) => {
@@ -303,7 +328,6 @@
       e.preventDefault();
       let valid = true;
 
-      // Validate required text fields
       form.querySelectorAll('.input-field[required]').forEach(input => {
         if (!input.value.trim()) {
           showError(input, 'This field is required.');
@@ -314,7 +338,6 @@
         }
       });
 
-      // Validate file
       const fileInput = form.querySelector('input[type="file"][required]');
       if (fileInput) {
         if (!fileInput.files || !fileInput.files[0]) {
@@ -336,7 +359,6 @@
         }
       }
 
-      // Validate textarea min chars
       const textarea = form.querySelector('textarea[data-min-chars]');
       if (textarea && textarea.value.length < 200) {
         const err = textarea.closest('.form-group')?.querySelector('.form-error');
@@ -344,7 +366,6 @@
         valid = false;
       }
 
-      // Validate checkbox
       const checkbox = form.querySelector('input[type="checkbox"][required]');
       if (checkbox && !checkbox.checked) {
         const err = checkbox.closest('.form-group')?.querySelector('.form-error');
@@ -354,7 +375,6 @@
 
       if (!valid) return;
 
-      // Show success
       const formWrapper = document.getElementById('form-wrapper');
       const successCard = document.getElementById('success-card');
       if (formWrapper && successCard) {
@@ -404,7 +424,6 @@
     el.textContent = 'Apply — ' + title;
     if (elMeta) elMeta.textContent = title;
 
-    // Update page title
     document.title = 'Apply — ' + title + ' | Dharma Consulting';
   }
 
@@ -413,32 +432,28 @@
     const lines = document.querySelectorAll('.process-connector');
     if (!lines.length) return;
 
-    const lineObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animation = 'slideRight 1.2s cubic-bezier(0.22,1,0.36,1) forwards';
-          lineObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-
-    lines.forEach(l => {
-      l.style.width = '0';
-      l.style.opacity = '0';
-      lineObserver.observe(l);
-    });
-
-    // Override to show
     document.querySelectorAll('.process-connector').forEach(l => {
       l.style.width = '';
       l.style.opacity = '';
     });
   }
 
+  /* ── WILL-CHANGE CLEANUP (Task 6 Performance) ── */
+  function cleanupWillChange() {
+    // Remove will-change after animations complete to free GPU memory
+    setTimeout(() => {
+      document.querySelectorAll('[data-reveal].visible, [data-reveal].is-visible').forEach(el => {
+        el.style.willChange = 'auto';
+      });
+    }, 2000);
+  }
+
   /* ── INIT ALL ── */
   document.addEventListener('DOMContentLoaded', function () {
+    initPageLoader();
     initNav();
     initMobileMenu();
+    initSmoothScroll();
     initScrollReveal();
     initCounters();
     initParticles();
@@ -450,6 +465,9 @@
     initContactForm();
     initJobTitle();
     initProcessLines();
+
+    // Cleanup will-change after load animations
+    setTimeout(cleanupWillChange, 3000);
   });
 
 })();
